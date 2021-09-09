@@ -6,6 +6,6 @@ class Years
 {
     public static function isLeap(int $year): bool
     {
-
+        return $year % 4 === 0 || $year % 400 === 0;
     }
 }
