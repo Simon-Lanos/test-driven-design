@@ -9,12 +9,16 @@ class Equilibrium
         $count = 0;
 
         foreach (str_split($string) as $character) {
-            if ($character === '(' && $count >= 0) {
+            if ($character === '(') {
                 $count++;
             }
 
             if ($character === ')') {
                 $count--;
+            }
+
+            if ($count === -1) {
+                return false;
             }
         }
 
