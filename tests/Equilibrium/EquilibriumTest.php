@@ -19,5 +19,6 @@ final class EquilibriumTest extends TestCase
     {
         $this->assertFalse(Equilibrium::isInEquilibrium('((foo)'));
         $this->assertFalse(Equilibrium::isInEquilibrium(')(()'));
+        $this->assertFalse(Equilibrium::isInEquilibrium('())'));
     }
 }
